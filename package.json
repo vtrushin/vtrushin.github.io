@@ -1,0 +1,28 @@
+{
+  "name": "vtrushin.github.io",
+  "version": "1.0.0",
+  "description": "Home site 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vtrushin/vtrushin.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vtrushin/vtrushin.github.io/issues"
+  },
+  "homepage": "https://github.com/vtrushin/vtrushin.github.io#readme",
+  "devDependencies": {
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.3.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-rollup": "^1.0.1",
+    "gulp-sass": "^2.0.4"
+  },
+  "dependencies": {}
+}
