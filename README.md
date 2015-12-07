@@ -22,8 +22,11 @@
 
 
 ## Приложение TravelThings
+Разрабатывается под мобильные устройства
 
 [Страница на Гитхабе](https://github.com/vtrushin/travel-things)
+
+[Демо](https://rawgit.com/vtrushin/travel-things/master/client/www/index.html)
 
 
 ## Небольшие наработки
