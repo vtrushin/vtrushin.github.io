@@ -20,7 +20,7 @@
   text-transform: uppercase;
   text-decoration: underline;
   margin-left: 20px;
-  margin-bottom: 5px; }
+  margin-bottom: 10px; }
 
 .article__descr {
   display: block;
@@ -30,7 +30,7 @@
   color: black; }
 
 body {
-  background-color: #a8c9c4; }
+  background-color: #add2cd; }
 
 .body {
   display: flex;
