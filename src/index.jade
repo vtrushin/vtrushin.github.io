@@ -4,13 +4,33 @@ html
 		meta(charset = "utf-8")
 		//script(src = "../../vendor/web-animations-js/web-animations.min.js")
 		//style(type = "text/css").
+		link(rel = "stylesheet", href = "styles/main.css")
 
+	mixin article(num, href, title, description)
+		a.article(href = href)
+			span.article__number= num
+			span.article__title= title
+			span.article__descr= description
 
 	body
-		h1 Трушин Влад
 
-		div
-			h2 Статьи
-			ul
-				li
-					a(href = "articles/morphing") Морфинг
+
+		.body
+			.body__aside
+				img(src = "images/avatar.jpg")
+				.logo Трушин Влад
+				a.github(href = "https://github.com/vtrushin") Гитхаб
+
+			.body__content
+				div
+				// h2 Статьи
+				ul
+					li
+						+article(
+							"01",
+							"articles/morphing",
+							"Морфинг",
+							"Библиотека для плавных переходов между сценами"
+						)
+
+

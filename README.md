@@ -13,12 +13,9 @@
 - [Отправка сообщения](https://rawgit.com/vtrushin/morphing/master/demo/3/index.html)
 
 
-
 ## Тестовое задание для 2ГИС
 
 [Страница на Гитхабе](https://github.com/vtrushin/2gis-test)
-
-
 
 
 ## Приложение TravelThings
