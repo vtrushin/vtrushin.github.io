@@ -4,6 +4,24 @@
 	<meta charset="UTF-8">
 	<title></title>
 	<style>
+		@-webkit-keyframes shake {
+			10%, 90% {
+				transform: translateY(-2px);
+			}
+
+			20%, 80% {
+				transform: translateY(4px);
+			}
+
+			30%, 50%, 70% {
+				transform: translateY(-8px);
+			}
+
+			40%, 60% {
+				transform: translateY(8px);
+			}
+		}
+
 		input,
 		textarea {
 			border: 1px solid #ccc;
@@ -40,7 +58,6 @@
 		}
 
 		.header input,
-		.header select,
 		.header option,
 		.header button {
 			padding: 5px;
@@ -56,6 +73,10 @@
 			padding-right: 10px;
 		}
 
+		.header .filler {
+			flex: 1;
+		}
+
 		.header > *:not(:last-child) {
 			margin-right: 10px;
 		}
@@ -69,6 +90,10 @@
 		.g-hidden {
 			display: none;
 		}
+
+		select:not(.g-hidden) {
+			animation: .6s shake ease-out;
+		}
 	</style>
 </head>
 <body>
@@ -76,9 +101,9 @@
 <div class="page">
 	<div class="header">
 		<input type="text" size="25" placeholder="Bookmate login" id="user-name" value="nastenkavoronina"/>
-		<!--<input type="text" size="20" placeholder="Book id" id="book-id" value="fl87dhwG"/>-->
-		<select id="books" class="g-hidden"></select>
 		<button id="search">Загрузить цитаты</button>
+		<div class="filler"></div>
+		<select id="books" class="g-hidden"></select>
 	</div>
 	<textarea id="output"></textarea>
 </div>

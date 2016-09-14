@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		loadBookmateQuotes(userNameEl.value).then(function(quotes) {
 
 			booksEl.classList.remove('g-hidden');
+			booksEl.focus();
 
 			function showFilteredQuotes(bookId) {
 				let values = (
