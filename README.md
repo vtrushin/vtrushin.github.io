@@ -18,14 +18,6 @@
 [Страница на Гитхабе](https://github.com/vtrushin/2gis-test)
 
 
-## Приложение TravelThings
-Разрабатывается под мобильные устройства
-
-[Страница на Гитхабе](https://github.com/vtrushin/travel-things)
-
-[Демо](https://rawgit.com/vtrushin/travel-things/master/client/www/index.html)
-
-
 ## Небольшие наработки
 - [Амфоры](https://rawgit.com/vtrushin/examples/master/amphorae.html)
 - [Список с прилипающим к нижнему и верхнему краю элементом](https://rawgit.com/vtrushin/examples/master/list-with-snap-item.html)
