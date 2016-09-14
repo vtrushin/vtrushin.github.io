@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		input,
+		textarea {
+			border: 1px solid #ccc;
+		}
+
+		button {
+			background-color: #cecece;
+			border: none;
+		}
+
+		html,
+		body {
+			margin: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		body {
+			padding: 10px;
+			box-sizing: border-box;
+		}
+
+		.page {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			height: 100%;
+		}
+
+		.header {
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+		}
+
+		.header input,
+		.header select,
+		.header option,
+		.header button {
+			padding: 5px;
+			font-size: 16px;
+		}
+
+		.header select {
+			max-width: 200px;
+		}
+
+		.header button {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		.header > *:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		textarea {
+			flex: 1;
+			padding: 5px;
+			font-size: 16px;
+		}
+
+		.g-hidden {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+<div class="page">
+	<div class="header">
+		<input type="text" size="25" placeholder="Bookmate login" id="user-name" value="nastenkavoronina"/>
+		<!--<input type="text" size="20" placeholder="Book id" id="book-id" value="fl87dhwG"/>-->
+		<select id="books" class="g-hidden"></select>
+		<button id="search">Загрузить цитаты</button>
+	</div>
+	<textarea id="output"></textarea>
+</div>
+
+
+<script src="load-bookmate-quotes.js"></script>
+<script src="index2.js"></script>
+
+</body>
+</html>
