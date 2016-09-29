@@ -12,7 +12,7 @@ function createOption(book) {
 document.addEventListener('DOMContentLoaded', function() {
 	var userNameEl = document.getElementById('user-name');
 	var booksEl = document.getElementById('books');
-	var searchEl = document.getElementById('search');
+	var formEl = document.getElementById('form');
 	var outputEl = document.getElementById('output');
 	var loadingEl = document.getElementById('loading');
 
@@ -20,7 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		outputEl.select();
 	});
 
-	searchEl.addEventListener('click', function() {
+	formEl.addEventListener('submit', function(e) {
+		e.preventDefault();
+
 		loadingEl.classList.remove('g-hidden');
 
 		getQuotes(userNameEl.value).then(function(quotes) {
