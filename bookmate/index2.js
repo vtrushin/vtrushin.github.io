@@ -1,7 +1,9 @@
-let defaultOption = `
-	<option value="">Все</option>
-	<option disabled="disabled">———</option>
-`;
+function createDefaultOptions(size) {
+	return `
+		<option value="">Все (${size})</option>
+		<option disabled="disabled">———</option>
+	`;
+}
 
 function createOption(book) {
 	return `
@@ -69,7 +71,10 @@ document.addEventListener('DOMContentLoaded', function() {
 				}
 			});
 
-			booksEl.innerHTML = [...defaultOption, books.map(createOption)].join('');
+			booksEl.innerHTML = [
+				...createDefaultOptions(quotes.length),
+				books.map(createOption)
+			].join('');
 
 			booksEl.addEventListener('change', () => {
 				let selected = booksEl.selectedOptions[0];
