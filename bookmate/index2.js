@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		e.preventDefault();
 
 		loadingEl.classList.remove('g-hidden');
+		booksEl.classList.add('g-hidden');
 
 		getQuotes(userNameEl.value).then(function(quotes) {
 			// console.log(quotes);
