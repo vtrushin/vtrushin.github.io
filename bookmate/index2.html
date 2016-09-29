@@ -4,9 +4,18 @@
 	<meta charset="UTF-8">
 	<title></title>
 	<style>
+		body {
+			font-family: Helvetica;
+		}
+
 		input,
 		textarea {
 			border: 1px solid #ccc;
+		}
+
+		textarea {
+			overflow-x: auto;
+			white-space: nowrap;
 		}
 
 		button {
@@ -85,13 +94,14 @@
 		<input type="text" size="25" placeholder="Bookmate login" id="user-name" value="nastenkavoronina"/>
 		<button id="search">Загрузить цитаты</button>
 		<div class="filler"></div>
+		<div id="loading" class="g-hidden">Загрузка ...</div>
 		<select id="books" class="g-hidden"></select>
 	</div>
 	<textarea id="output"></textarea>
 </div>
 
 
-<script src="load-bookmate-quotes.js"></script>
+<script src="load-bookmate-quotes2.js"></script>
 <script src="index2.js"></script>
 
 </body>
