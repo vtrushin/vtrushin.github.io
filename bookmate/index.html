@@ -81,6 +81,14 @@
 			padding: 150px 25% 0 25%;
 		}
 
+		.count {
+			position: absolute;
+			font-size: 30px;
+			right: 10px;
+			bottom: 10px;
+			color: #bbb;
+		}
+
 		.g-hidden {
 			display: none;
 		}
@@ -98,8 +106,12 @@
 </form>
 
 <div class="select">
-	<div id="loading" class="g-hidden">Загрузка ...</div>
+	<div id="loading" class="g-hidden">Загрузка...</div>
 	<select id="books" class="g-hidden"></select>
+</div>
+
+<div class="count g-hidden" id="count">
+	<span id="current-index"></span> / <span id="all-count"></span>
 </div>
 
 <script src="load-bookmate-quotes2.js"></script>

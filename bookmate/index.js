@@ -15,7 +15,7 @@ function randomColor(alpha = 1) {
 }
 
 function createDefaultOptions(size) {
-	let quoteText = declensionOfNumber(size, ['цитата', 'цитаты', 'цитат']);
+	let quoteText = declensionOfNumber(size, ['книга', 'книги', 'книг']);
 	return `
 		<option value="">Все ${size} ${quoteText}</option>
 		<option disabled="disabled">———</option>
@@ -35,10 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	var loadingEl = document.getElementById('loading');
 	var quoteEl = document.getElementById('quote');
 	var quoteTextEl = document.getElementById('quote-text');
+	var countEl = document.getElementById('count');
+	var currentIndexEl = document.getElementById('current-index');
+	var allCountEl = document.getElementById('all-count');
 	let filteredQuotes = [];
 
 	function updateQuote() {
-		quoteTextEl.textContent = filteredQuotes[Math.round(Math.random() * filteredQuotes.length - 1)];
+		const index = Math.round(Math.random() * (filteredQuotes.length - 1));
+		quoteTextEl.textContent = filteredQuotes[index];
+		currentIndexEl.textContent = index + 1;
+		allCountEl.textContent = filteredQuotes.length;
 		document.body.style.backgroundColor = randomColor(.1);
 	}
 
@@ -70,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			loadingEl.classList.add('g-hidden');
 			booksEl.classList.remove('g-hidden');
+			countEl.classList.remove('g-hidden');
 			booksEl.focus();
 
 			function showFilteredQuotes(bookId) {
@@ -94,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 
 			booksEl.innerHTML = [
-				...createDefaultOptions(quotes.length),
+				...createDefaultOptions(books.length),
 				books.map(createOption)
 			].join('');
 
